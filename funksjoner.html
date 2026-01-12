@@ -1,140 +1,142 @@
 <!DOCTYPE html>
 <html lang="no">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Arbeidsark – Funksjoner i JavaScript (VG1)</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Funksjoner i JavaScript – VG1</h1>
+      <h1>Funksjoner i JavaScript – VG1</h1>
     </header>
 
-    <hr>
+    <hr />
     <main>
-        <!--Oppgave 1-->
-        <h2>Oppgave 1</h2>
-        <p id="oppgave1">Hei</p>
-        <button onclick="endreTekst()">Endre tekst</button>
+      <!--Oppgave 1-->
+      <h2>Oppgave 1</h2>
+      <p id="oppgave1">Hei</p>
+      <button onclick="endreTekst()">Endre tekst</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 2-->
-        <h2>Oppgave 2</h2>
-        <p id="oppgave2"></p>
-        <button onclick="visMelding()">Vis melding</button>
+      <!--Oppgave 2-->
+      <h2>Oppgave 2</h2>
+      <p id="oppgave2"></p>
+      <button onclick="visMelding()">Vis melding</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 3-->
-        <h2>Oppgave 3</h2>
-        <p id="oppgave3">10</p>
-        <button onclick="plussEn()">-1</button>
+      <!--Oppgave 3-->
+      <h2>Oppgave 3</h2>
+      <p id="oppgave3">10</p>
+      <button onclick="plussEn()">-1</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 4-->
-        <h2>Oppgave 4</h2>
-        <p id="oppgave4"></p>
-        <button onclick="byttStatus()">Bytt status</button>
+      <!--Oppgave 4-->
+      <h2>Oppgave 4</h2>
+      <p id="oppgave4"></p>
+      <button onclick="byttStatus()">Bytt status</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 5-->
-        <h2>Oppgave 5</h2>
-        <p id="oppgave5">Du har ikke valgt noe</p>
+      <!--Oppgave 5-->
+      <h2>Oppgave 5</h2>
+      <p id="oppgave5">Du har ikke valgt noe</p>
 
-        <button onclick="velg('Eple')">Eple</button>
-        <button onclick="velg('Banan')">Banan</button>
-        <button onclick="velg('Appelsin')">Appelsin</button>
+      <button onclick="velg('Eple')">Eple</button>
+      <button onclick="velg('Banan')">Banan</button>
+      <button onclick="velg('Appelsin')">Appelsin</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 6-->
-        <h2>Oppgave 6</h2>
-        <p id="oppgave6">Er kebab godt?</p>
-        <p id="svar6"></p>
+      <!--Oppgave 6-->
+      <h2>Oppgave 6</h2>
+      <p id="oppgave6">Er kebab godt?</p>
+      <p id="svar6"></p>
 
-        <button onclick="sjekkSvar('Ja')">Ja</button>
-        <button onclick="sjekkSvar('Nei')">Nei</button>
+      <button onclick="sjekkSvar('Ja')">Ja</button>
+      <button onclick="sjekkSvar('Nei')">Nei</button>
 
-        <hr>
+      <hr />
 
-        <!--Oppgave 7-->
-        <h2>Oppgave 7</h2>
-        <p id="oppgave7">Hva ville du gjort hjemme?</p>
-        <button onclick="hjemme()">Spille AC Shadows</button>
-        <button onclick="trene()">Trene</button>
+      <!--Oppgave 7-->
+      <h2>Oppgave 7</h2>
+      <p id="oppgave7">Hva ville du gjort hjemme?</p>
+      <button onclick="hjemme()">Spille AC Shadows</button>
+      <button onclick="trene()">Trene</button>
     </main>
 
     <script>
-        /*OPPGAVE 1:
+      /*OPPGAVE 1:
         1. Klikk på knappen og se hva som skjer
         2. Endre teksten som vises
         3. Skriv navnet ditt i teksten*/
-        function endreTekst() {
-            document.getElementById("oppgave1").innerHTML = "robert";
-        }
+      function endreTekst() {
+        document.getElementById("oppgave1").innerHTML = "robert";
+      }
 
-        /*OPPGAVE: 2
+      /*OPPGAVE: 2
         1. Endre teksten i variabelen
         2. Lag en ny variabel og bytt den ut med variabelen melding*/
-        function visMelding() {
-            let nyMelding = "Hei, dette er ny melding";
-            document.getElementById("oppgave2").innerHTML = nyMelding;
-        }
+      function visMelding() {
+        let nyMelding = "Hei, dette er ny melding";
+        document.getElementById("oppgave2").innerHTML = nyMelding;
+      }
 
-        /*OPPGAVE: 3
+      /*OPPGAVE: 3
         Variabelen under husker verdien sin mellom hvert klikk.
         1. Endre slik at telleren starter på 10
         2. Lag en ny funksjon og knapp som trekker fra 1
         */
-        let tall = 10;
+      let tall = 10;
 
-        function plussEn() {
-            tall = tall - 1;
-            //Hent element ved hjelp av id
-            document.getElementById("oppgave3").innerHTML = tall;
+      function plussEn() {
+        tall = tall - 1;
+        //Hent element ved hjelp av id
+        document.getElementById("oppgave3").innerHTML = tall;
+      }
+
+      /*OPPGAVE: 4*/
+      let erPa = false;
+
+      function byttStatus() {
+        if (erPa) {
+          document.getElementById("oppgave4").innerHTML = "Status: På";
+          erPa = false;
+        } else {
+          document.getElementById("oppgave4").innerHTML = "Status: Av";
+          erPa = true;
         }
+      }
 
-        /*OPPGAVE: 4*/
-        let erPa = false;
-
-        function byttStatus() {
-            if (erPa) {
-                document.getElementById("oppgave4").innerHTML = "Status: På";
-                erPa = false;
-            } else {
-                document.getElementById("oppgave4").innerHTML = "Status: Av";
-                erPa = true;
-            }
-        }
-
-        /*OPPGAVE: 5 Parameter
+      /*OPPGAVE: 5 Parameter
         Her sender vi informasjon INN i funksjonen.
 
         OPPGAVE:
         1. Legg til minst én ny knapp
         2. Endre teksten som vises
         */
-        function velg(valg) {
-            document.getElementById("oppgave5").innerHTML = "Du har valgt: <b>" + valg + "</b>!";
-        }
-
-        /*OPPGAVE: 6
+      function velg(valg) {
+        document.getElementById("oppgave5").innerHTML =
+          "Du har valgt: " + valg;
+      }
+      
+      /*OPPGAVE: 6
         1. Se på HTML koden
         2. Bruk if / else
         3. Endre spørsmålet til noe annet*/
-        function sjekkSvar(svar) {
-            //Vis om brukeren valgte riktig eller galt svar
-            if (svar === "Ja") {
-                document.getElementById("svar6").innerHTML = "Enig, kebab er godt!";
-            } else {
-                document.getElementById("svar6").innerHTML = "Smak og behag, men mange liker kebab.";
-            }
+      function sjekkSvar(svar) {
+        //Vis om brukeren valgte riktig eller galt svar
+        if (svar === "Ja") {
+          document.getElementById("svar6").innerHTML = "Enig, kebab er godt!";
+        } else {
+          document.getElementById("svar6").innerHTML =
+            "Smak og behag, men mange liker kebab.";
         }
+      }
 
-        /*OPPGAVE: 7
+      /*OPPGAVE: 7
         Her skal du lage din egen funskjon
         Må inneholde:
         - minst én variabel
@@ -145,12 +147,13 @@
         // hva ville jeg gjort om jeg var hjemme. spille ac shaddows eller trene
         
         */
-        function hjemme() {
-            document.getElementById("oppgave7").innerHTML = "Du ville spilt ac shaddows.";
-        }
-        function trene() {
-            document.getElementById("oppgave7").innerHTML = "Du ville trenet.";
-        }
+      function hjemme() {
+        document.getElementById("oppgave7").innerHTML =
+          "Du ville spilt ac shaddows.";
+      }
+      function trene() {
+        document.getElementById("oppgave7").innerHTML = "Du ville trenet.";
+      }
     </script>
-</body>
+  </body>
 </html>
