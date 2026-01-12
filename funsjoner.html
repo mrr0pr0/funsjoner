@@ -16,6 +16,10 @@
     <!-- andre funsjon -->
     <p id="andrefunsjon">dette er den andre funsjoen</p>
     <button onclick="andrefunsjon()">dette er tredje knapp</button>
+
+    <!-- tredje funsjon -->
+    <p id="tredjefunsjon">0</p>
+    <button onclick="plussEn()">pluss en</button>
     
     <script>
         function førstefunsjon() {
@@ -25,6 +29,13 @@
         function andrefunsjon(){
             let tekst = "velkomen til prugramering uke 2";
             document.getElementById("andrefunsjon").innerHTML = tekst;
+            console.log(tekst);
+        }
+        // tredje funsjon
+        let tall = 0
+        function plussEn(){
+            tall += 1;
+            document.getElementById("tredjefunsjon").innerHTML = tall;
         }
     </script>
 </body>
