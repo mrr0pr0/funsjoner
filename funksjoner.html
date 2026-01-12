@@ -62,8 +62,9 @@
 
         <!--Oppgave 7-->
         <h2>Oppgave 7</h2>
-        <p id="oppgave7">Lag din egen løsning her</p>
-        <button onclick="">Test</button>
+        <p id="oppgave7">Hva ville du gjort hjemme?</p>
+        <button onclick="hjemme()">Spille AC Shadows</button>
+        <button onclick="trene()">Trene</button>
     </main>
 
     <script>
@@ -141,12 +142,15 @@
         - if / else
         - getElementById()
 
-        IDEER:
-        - På / av-knapp
-        - Klikkteller
-        - Velg humør
-        - Mini-quiz
+        // hva ville jeg gjort om jeg var hjemme. spille ac shaddows eller trene
+        
         */
+        function hjemme() {
+            document.getElementById("oppgave7").innerHTML = "Du ville spilt ac shaddows.";
+        }
+        function trene() {
+            document.getElementById("oppgave7").innerHTML = "Du ville trenet.";
+        }
     </script>
 </body>
 </html>
