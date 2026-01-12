@@ -26,10 +26,18 @@
     <button onclick="byttStatus()">bytt status</button>
 
     <script>
+/**
+ * Sets the innerHTML of the "førstefunsjon" element to "Førstefunksjonen har endret denne teksten".
+ * @returns {undefined} Nothing is returned.
+ */
         function førstefunsjon() {
             document.getElementById("førstefunsjon").innerHTML = "Førstefunksjonen har endret denne teksten";
         }
         
+/**
+ * Sets the innerHTML of the "andrefunsjon" element to "velkomen til prugramering uke 2" and logs the same text to the console.
+ * @returns {undefined} Nothing is returned.
+ */
         function andrefunsjon(){
             let tekst = "velkomen til prugramering uke 2";
             document.getElementById("andrefunsjon").innerHTML = tekst;
@@ -37,6 +45,9 @@
         }
         // tredje funsjon
         let tall = 0
+/**
+ * Increment the value of the "tredjefunsjon" element by one.
+ */
         function plussEn(){
             tall += 1;
             document.getElementById("tredjefunsjon").innerHTML = tall;
@@ -44,11 +55,12 @@
 
         // fjerde funsjon
         let status = false;
+/**
+ * Toggle the value of the "fjerdefunsjon" element.
+ * @returns {undefined} Nothing is returned.
+ */
         function byttStatus(){
             status = !status;
             document.getElementById("fjerdefunsjon").innerHTML = status;
         }
-        
     </script>
-</body>
-</html>
