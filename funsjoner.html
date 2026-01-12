@@ -7,15 +7,25 @@
 </head>
 <body>
     <p id="testText">dette er testtext</p> 
-    <button onclick="document.getElementById('teskt').innerHTML = 'det fungerer wow'">førstekanppen</button>
+    <button onclick="document.getElementById('testText').innerHTML = 'det fungerer wow'">førsteknappen</button>
 
     <!-- første funsjon -->
-     <p id="førstefunsjon">Dette er en førstefunsjon.</p>
+    <p id="førstefunsjon">Dette er en førstefunsjon.</p>
+    <button onclick="førstefunsjon()">andre knapp</button>
+
+    <!-- andre funsjon -->
+    <p id="andrefunsjon">dette er den andre funsjoen</p>
+    <button onclick="andrefunsjon()">dette er tredje knapp</button>
+    
     <script>
         function førstefunsjon() {
-            document.getElementById("førstefunsjon").innerHTML = "Førstefunksjonen har endret denne teksten!";
+            document.getElementById("førstefunsjon").innerHTML = "Førstefunksjonen har endret denne teksten";
         }
-        førstefunsjon();
+        
+        function andrefunsjon(){
+            let tekst = "velkomen til prugramering uke 2";
+            document.getElementById("andrefunsjon").innerHTML = tekst;
+        }
     </script>
 </body>
 </html>
