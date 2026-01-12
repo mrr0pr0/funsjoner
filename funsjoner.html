@@ -25,6 +25,10 @@
     <p id="fjerdefunsjon">false</p>
     <button onclick="byttStatus()">bytt status</button>
 
+    <!-- femte funsjon valg -->
+     <p id="femtefunsjon"></p>
+     <button onclick="valg1()">velg denne1</button>
+     <button onclick="valg2()">velg denne2</button>
     <script>
 /**
  * Sets the innerHTML of the "førstefunsjon" element to "Førstefunksjonen har endret denne teksten".
@@ -62,5 +66,20 @@
         function byttStatus(){
             status = !status;
             document.getElementById("fjerdefunsjon").innerHTML = status;
+
+        }
+        // femte funsjon
+        let valg = "valg1";
+/**
+ * Sets the innerHTML of the "femtefunsjon" element to the value of the "valg" variable.
+ * @returns {undefined} Nothing is returned.
+ */
+        function valg1(){
+            valg = "valg1";
+            document.getElementById("femtefunsjon").innerHTML = "du valgte valg1";
+        }
+        function valg2(){
+            valg = "valg2";
+            document.getElementById("femtefunsjon").innerHTML = "du valgte valg2";
         }
     </script>
