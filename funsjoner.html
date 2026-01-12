@@ -20,7 +20,11 @@
     <!-- tredje funsjon -->
     <p id="tredjefunsjon">0</p>
     <button onclick="plussEn()">pluss en</button>
-    
+
+    <!-- fjerde funsjon bytte status bollian -->
+    <p id="fjerdefunsjon">false</p>
+    <button onclick="byttStatus()">bytt status</button>
+
     <script>
         function førstefunsjon() {
             document.getElementById("førstefunsjon").innerHTML = "Førstefunksjonen har endret denne teksten";
@@ -37,6 +41,14 @@
             tall += 1;
             document.getElementById("tredjefunsjon").innerHTML = tall;
         }
+
+        // fjerde funsjon
+        let status = false;
+        function byttStatus(){
+            status = !status;
+            document.getElementById("fjerdefunsjon").innerHTML = status;
+        }
+        
     </script>
 </body>
 </html>
